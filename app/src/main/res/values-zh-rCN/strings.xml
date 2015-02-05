@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">多语言</string>
 
     <string name="test"> 你好 </string>
     <string name="settings">设置</string>
