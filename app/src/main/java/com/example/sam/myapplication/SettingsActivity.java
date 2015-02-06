@@ -16,7 +16,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.logging.Logger;
 
 
 public class SettingsActivity extends Activity {
@@ -63,7 +62,6 @@ public class SettingsActivity extends Activity {
         Resources resources = getResources();
         Configuration config = resources.getConfiguration();
         DisplayMetrics dm = resources .getDisplayMetrics();
-        String temp ;
         switch (index){
             case 0:
                 //跟随系统
@@ -87,7 +85,7 @@ public class SettingsActivity extends Activity {
                 break;
             case 5:
                 //其他语言 本地语言
-                config.locale = new Locale("sam");
+                config.locale = new Locale("xj");
                 break;
 
         }

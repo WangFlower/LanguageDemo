@@ -14,6 +14,8 @@ import java.util.Locale;
  */
 public class LanguageApplication extends Application {
 
+    private Locale mlocale = null;
+
     public LanguageApplication(){
 
     }
@@ -27,10 +29,12 @@ public class LanguageApplication extends Application {
         DisplayMetrics metrics = getResources().getDisplayMetrics();
 
         if(null!=localconfig&&!"".equals(localconfig)){
-            config.locale = new Locale(localconfig);
+            mlocale = new Locale(localconfig);
         }else{
-            config.locale = Locale.getDefault();
+            mlocale = Locale.getDefault();
         }
+        config.locale = mlocale;
+        Locale.setDefault(mlocale);
         getResources().updateConfiguration(config, metrics);
 
 
