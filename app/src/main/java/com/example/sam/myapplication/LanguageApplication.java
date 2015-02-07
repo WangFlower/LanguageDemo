@@ -24,7 +24,6 @@ public class LanguageApplication extends Application {
     public void onCreate() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         String localconfig = sp.getString("local","");
-        Log.d("LanguageApplication","onConfigurationChanged-->"+localconfig);
         Configuration config = getResources().getConfiguration();
         DisplayMetrics metrics = getResources().getDisplayMetrics();
 
@@ -34,7 +33,6 @@ public class LanguageApplication extends Application {
             mlocale = Locale.getDefault();
         }
         config.locale = mlocale;
-        Locale.setDefault(mlocale);
         getResources().updateConfiguration(config, metrics);
 
 

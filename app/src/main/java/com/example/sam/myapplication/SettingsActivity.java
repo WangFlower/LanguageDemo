@@ -36,7 +36,6 @@ public class SettingsActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 setLanguage((int)id);
-
             }
         });
     }
